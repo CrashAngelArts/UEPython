@@ -1,19 +1,8 @@
-//#define PY_SSIZE_T_CLEAN
-//#include <stdio.h>
-//#include </usr/include/python3.12/Python.h>
-//int main(int argc, char *argv[]) {
-//    Py_Initialize();
-//    PyObject *obj = Py_BuildValue("s", argv[0]);
-//    FILE *file = _Py_fopen_obj(obj, "r+");
-//    if(file != NULL) {
-//        PyRun_SimpleFile(file, argv[0]);
-//    }
-//    Py_Finalize();
-//    return 0;
-//}
 #define PY_SSIZE_T_CLEAN
+
 #include <stdio.h>
 #include </usr/include/python3.12/Python.h>
+
 int main(int argc, char *argv[]) {
     (void)argc;
     wchar_t *program = Py_DecodeLocale(argv[0], NULL);
